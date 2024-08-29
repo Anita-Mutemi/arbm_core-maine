@@ -1,7 +1,7 @@
 from typing import Any
 
-from pydantic import BaseModel
-from pydantic.color import Color
+from pydantic import BaseModel  # type: ignore
+from pydantic.color import Color  # type: ignore
 
 
 class Node(BaseModel):

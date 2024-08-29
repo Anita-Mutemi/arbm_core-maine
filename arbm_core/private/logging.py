@@ -1,7 +1,7 @@
 import enum
 
-from sqlalchemy import Column, String, Integer, DateTime, func, Enum
-from sqlalchemy.dialects.postgresql import JSONB
+from sqlalchemy import Column, String, Integer, DateTime, func, Enum  # type: ignore
+from sqlalchemy.dialects.postgresql import JSONB  # type: ignore
 
 from . import Base
 

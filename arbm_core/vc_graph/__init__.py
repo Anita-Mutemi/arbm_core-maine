@@ -1,6 +1,6 @@
 import os
 
-from pymongo import MongoClient
+from pymongo import MongoClient  # type: ignore
 
 
 db_host = os.environ['MONGO_HOST']

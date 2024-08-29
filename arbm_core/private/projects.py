@@ -2,16 +2,16 @@ import datetime
 import enum
 from collections import defaultdict
 from urllib.parse import urlparse
-import pytz
+import pytz  # type: ignore
 
-from deprecated import deprecated
+from deprecated import deprecated  # type: ignore
 
 import uuid
-from loguru import logger
-from ordered_enum.ordered_enum import OrderedEnum
+from loguru import logger  # type: ignore
+from ordered_enum.ordered_enum import OrderedEnum  # type: ignore 
 
-from psycopg2._range import DateRange
-from sqlalchemy import (
+from psycopg2._range import DateRange  # type: ignore
+from sqlalchemy import (  # type: ignore
     Boolean,
     BigInteger,
     Column,
@@ -25,17 +25,18 @@ from sqlalchemy import (
     Table,
     Text,
     UniqueConstraint,
-    func, text, ForeignKeyConstraint,
-    select
+    func,
+    text,
+    ForeignKeyConstraint,
+    select,
 )
-from sqlalchemy.ext.hybrid import hybrid_property
-from sqlalchemy.dialects.postgresql import UUID, DATERANGE, ExcludeConstraint
-from sqlalchemy.orm import relationship, validates, object_session, reconstructor
+from sqlalchemy.ext.hybrid import hybrid_property  # type: ignore
+from sqlalchemy.dialects.postgresql import UUID, DATERANGE, ExcludeConstraint  # type: ignore
+from sqlalchemy.orm import relationship, validates, object_session, reconstructor  # type: ignore
 
 from arbm_core.core import MongoDb
 from arbm_core.core.signals import AddSignal, get_signals_for_project, get_unique_signals_for_project, save_signal
 from .relationships import LinkedinInvestorActivityAssociation
-
 
 
 from . import Base

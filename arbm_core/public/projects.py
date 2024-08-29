@@ -2,13 +2,13 @@ from datetime import datetime, timedelta
 
 import uuid
 
-from sqlalchemy import ARRAY, Boolean, Column, Date, DateTime, Table, ForeignKey, String, Text, Integer, Index, and_
-from sqlalchemy.sql import func
-from sqlalchemy.orm import relationship, validates, object_session
-from sqlalchemy.dialects.postgresql import UUID
-from sqlalchemy.ext.hybrid import hybrid_property
+from sqlalchemy import ARRAY, Boolean, Column, Date, DateTime, Table, ForeignKey, String, Text, Integer, Index, and_  # type: ignore
+from sqlalchemy.sql import func  # type: ignore
+from sqlalchemy.orm import relationship, validates, object_session  # type: ignore
+from sqlalchemy.dialects.postgresql import UUID  # type: ignore
+from sqlalchemy.ext.hybrid import hybrid_property  # type: ignore
 
-import pytz
+import pytz  # type: ignore
 
 from arbm_core.core import MongoDb
 from arbm_core.core.signals import get_unique_signals_for_project, get_unique_signals_for_fund

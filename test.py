@@ -1,18 +1,18 @@
 import datetime
 import random
 from pprint import pprint
-import pytz
+import pytz # type: ignore
 
-from sqlalchemy import func, distinct
-from src.arbm_core.public.projects import UserProjectAssociation
+from sqlalchemy import func, distinct # type: ignore
+from .arbm_core.public.projects import UserProjectAssociation
 
-from src.arbm_core.core.publishing import publish_project, PublishingError
+from .arbm_core.core.publishing import publish_project, PublishingError
 # from arbm_core.merging.merge_projects import merge_objects
-from src.arbm_core.private import Session
-from src.arbm_core.public import Session as PublicSession
-from src.arbm_core.private.projects import TrackedProject, ProjectAnalytics, DetailsEntry, \
+from .arbm_core.private import Session
+from .arbm_core.public import Session as PublicSession
+from .arbm_core.private.projects import TrackedProject, ProjectAnalytics, DetailsEntry, \
     ProjectStatus, ProjectTagsAssociation
-from src.arbm_core.public.projects import Project
+from .arbm_core.public.projects import Project
 
 
 def description_entries():
@@ -89,7 +89,7 @@ def test_merge_projects():
         a = s.get(TrackedProject, '27908')
         b = s.get(TrackedProject, '20382')
 
-        merge_objects(s, a, b)
+        test_merge_projects(s, a, b)
 
 
 def test_project_getattr():

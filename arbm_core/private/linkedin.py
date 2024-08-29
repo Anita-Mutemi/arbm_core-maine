@@ -9,10 +9,10 @@ from .investors import Investor
 from .relationships import linkedin_post_likers_table, linkedin_profile_projects_table
 
 
-import pytz
-from sqlalchemy import Boolean, BigInteger, Column, DateTime, ForeignKey, Integer, String, Table, Text, UniqueConstraint, func
-from sqlalchemy.dialects.postgresql import JSONB
-from sqlalchemy.orm import object_session, relationship, validates
+import pytz  # type: ignore
+from sqlalchemy import Boolean, BigInteger, Column, DateTime, ForeignKey, Integer, String, Table, Text, UniqueConstraint, func  # type: ignore
+from sqlalchemy.dialects.postgresql import JSONB  # type: ignore
+from sqlalchemy.orm import object_session, relationship, validates  # type: ignore
 
 
 import datetime

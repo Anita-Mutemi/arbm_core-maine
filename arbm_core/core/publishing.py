@@ -1,8 +1,8 @@
 import enum
 
-from loguru import logger
-from pydantic import ValidationError
-from sqlalchemy import select
+from loguru import logger # type: ignore
+from pydantic import ValidationError # type: ignore
+from sqlalchemy import select # type: ignore
 
 from .. import public, private
 from ..private.projects import TrackedProject, ProjectAnalytics, FieldConfig, ProjectStatus
@@ -119,7 +119,7 @@ def publish_project(*, project_uuid, require_details_fields=True):
         if project.linkedin_profile:
             socials.append(SocialEntry(
                 title='linkedin_url',
-                url=project.linkedin_profile.linkedin_url or urls[0],
+                url=project.linkedin_profile.linkedin_url or url[0],
                 icon='linkedin',
             ))
 

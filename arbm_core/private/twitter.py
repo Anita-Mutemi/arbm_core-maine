@@ -1,6 +1,6 @@
 import json
 
-from sqlalchemy import (
+from sqlalchemy import (  # type: ignore
     ARRAY,
     BigInteger,
     Boolean,
@@ -12,12 +12,13 @@ from sqlalchemy import (
     Table,
     Text,
     UniqueConstraint,
-    func, select,
+    func,
+    select,
 )
-from sqlalchemy.orm import Session, relationship
-from sqlalchemy.ext.hybrid import hybrid_property
-from sqlalchemy.dialects.postgresql import insert
-import pandas as pd
+from sqlalchemy.orm import Session, relationship  # type: ignore 
+from sqlalchemy.ext.hybrid import hybrid_property  # type: ignore
+from sqlalchemy.dialects.postgresql import insert  # type: ignore
+import pandas as pd  # type: ignore
 
 from . import Base
 

@@ -3,8 +3,8 @@ import datetime
 import os
 from uuid import UUID
 
-from sqlalchemy import create_engine, Column, Boolean
-from sqlalchemy.orm import declarative_base, sessionmaker
+from sqlalchemy import create_engine, Column, Boolean # type: ignore
+from sqlalchemy.orm import declarative_base, sessionmaker # type: ignore
 
 from .. import BooleanModel
 

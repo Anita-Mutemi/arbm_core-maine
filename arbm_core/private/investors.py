@@ -1,10 +1,10 @@
 from functools import partial
 
-import pandas as pd
+import pandas as pd  # type: ignore
 
-from sqlalchemy import Boolean, Column, DateTime, Index, Integer, String, Text, func
-from sqlalchemy.dialects.postgresql import UUID
-from sqlalchemy.orm import relationship
+from sqlalchemy import Boolean, Column, DateTime, Index, Integer, String, Text, func # type: ignore
+from sqlalchemy.dialects.postgresql import UUID  # type: ignore
+from sqlalchemy.orm import relationship  # type: ignore
 
 
 import uuid

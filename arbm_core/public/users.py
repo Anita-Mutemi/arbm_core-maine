@@ -2,10 +2,10 @@ import datetime
 import enum
 import uuid
 
-import pytz
-from sqlalchemy import ARRAY, Boolean, Column, Enum, ForeignKey, Integer, String, DateTime, Date, func, Text, Table
-from sqlalchemy.dialects.postgresql import JSONB, UUID
-from sqlalchemy.orm import relationship
+import pytz  # type: ignore
+from sqlalchemy import ARRAY, Boolean, Column, Enum, ForeignKey, Integer, String, DateTime, Date, func, Text, Table  # type: ignore
+from sqlalchemy.dialects.postgresql import JSONB, UUID  # type: ignore
+from sqlalchemy.orm import relationship  # type: ignore
 
 from . import Base
 

@@ -1,5 +1,5 @@
-from sqlalchemy import select
-from sqlalchemy.exc import IntegrityError, NoResultFound
+from sqlalchemy import select # type: ignore
+from sqlalchemy.exc import IntegrityError, NoResultFound # type: ignore
 
 
 def get_one_or_create(session,

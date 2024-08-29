@@ -1,8 +1,8 @@
 import abc
 
-from pydantic_mongo import ObjectIdField
+from pydantic_mongo import ObjectIdField  # type: ignore
 
-from src import PyMongoBase
+from . import PyMongoBase
 
 
 class GraphEntity(PyMongoBase, abc.ABC):

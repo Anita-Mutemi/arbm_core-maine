@@ -1,4 +1,4 @@
-from loguru import logger
+from loguru import logger # type: ignore
 
 from .merge import extend_relationship
 from ..private.projects import TrackedProject, ProjectAnalytics

@@ -1,7 +1,7 @@
 import abc
 
-from bson import ObjectId
-from pydantic import BaseModel
+from bson import ObjectId  # type: ignore
+from pydantic import BaseModel  # type: ignore
 
 
 class PyMongoBase(BaseModel, abc.ABC):

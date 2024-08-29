@@ -1,5 +1,5 @@
-from sqlalchemy import Boolean, Column, String, Integer, DateTime, func
-from sqlalchemy.dialects.postgresql import JSONB
+from sqlalchemy import Boolean, Column, String, Integer, DateTime, func  # type: ignore
+from sqlalchemy.dialects.postgresql import JSONB  # type: ignore
 
 from . import Base
 

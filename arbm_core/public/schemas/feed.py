@@ -3,8 +3,8 @@ from datetime import datetime
 from typing import Any
 from uuid import UUID
 
-from pydantic import BaseConfig, BaseModel, Field, ValidationError, validator
-from loguru import logger
+from pydantic import BaseConfig, BaseModel, Field, ValidationError, validator  # type: ignore
+from loguru import logger  # type: ignore
 
 from .project import ProjectSchema
 
@@ -39,7 +39,7 @@ class SafeProjectList(BaseModel):
     def validate_projects(
         cls,
         value: list[dict],
-        values: "Stuff that was already parsed",
+        values: "Stuff that was already parsed", # type: ignore
         config: BaseConfig,
         field,
     ):
@@ -63,7 +63,7 @@ class Feed(BaseModel):
     def validate_projects(
         cls,
         value: list[dict],
-        values: "Stuff that was already parsed",
+        values: "Stuff that was already parsed",  # type: ignore
         config: BaseConfig,
         field,
     ):

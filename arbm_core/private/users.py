@@ -1,5 +1,5 @@
-from sqlalchemy import Column, Integer, String
-from sqlalchemy.dialects.postgresql import ARRAY
+from sqlalchemy import Column, Integer, String  # type: ignore
+from sqlalchemy.dialects.postgresql import ARRAY  # type: ignore
 
 from . import Base
 

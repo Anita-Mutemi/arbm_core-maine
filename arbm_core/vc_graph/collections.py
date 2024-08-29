@@ -1,7 +1,7 @@
-from pydantic_mongo import AbstractRepository
+from pydantic_mongo import AbstractRepository  # type: ignore
 
-from src import InvestingEntity, FundedEntity
-from src import InvestmentSignal
+from . import InvestingEntity, FundedEntity 
+from . import InvestmentSignal
 
 
 class InvestingCollection(AbstractRepository[InvestingEntity]):

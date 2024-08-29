@@ -1,8 +1,8 @@
 import os
 
-from sqlalchemy import create_engine
-from sqlalchemy.orm import declarative_base, sessionmaker
-from sqlalchemy.schema import MetaData
+from sqlalchemy import create_engine  # type: ignore
+from sqlalchemy.orm import declarative_base, sessionmaker  # type: ignore
+from sqlalchemy.schema import MetaData  # type: ignore
 
 from .. import BooleanModel
 

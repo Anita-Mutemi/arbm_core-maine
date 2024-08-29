@@ -1,5 +1,5 @@
-from pymongo import MongoClient
-from dotenv import dotenv_values
+from pymongo import MongoClient # type: ignore
+from dotenv import dotenv_values # type: ignore
 
 __all__ = ["MongoDb"]
 

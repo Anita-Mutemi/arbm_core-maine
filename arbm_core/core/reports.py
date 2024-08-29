@@ -1,10 +1,19 @@
-from sqlalchemy import func, and_
+import datetime
+from turtle import distance
+from typing import Counter
+from venv import logger
+from arbm_core.private import Session
+from arbm_core.private.users import User
+from arbm_core.public.users import ClientUser
+from sqlalchemy import func, and_ # type: ignore
+from fastapi import Depends # type: ignore
 
 from ..public.projects import Project, UserProjectAssociation
 
 
 def dynamic_report(date_from: datetime.date | None = None, date_to: datetime.date | None = None,
                    current_user: User = Depends(get_current_active_user)):
+
     if (date_from and date_to) and date_from > date_to:
         raise ValueError("start of date range cannot be greater than it's end!")
 
@@ -43,7 +52,7 @@ def dynamic_report(date_from: datetime.date | None = None, date_to: datetime.dat
             .filter(and_(*filter_projects + [UserProjectAssociation.rating != None])) \
             .group_by(ClientUser.username).all()
 
-        users_feedbacks = s.query(ClientUser.username, func.count(distinct(tuple_(
+        users_feedbacks = s.query(ClientUser.username, func.count(distance(tuple(
             UserProjectAssociation.username == ClientUser.username,
             UserProjectAssociation.project_id
         )))) \

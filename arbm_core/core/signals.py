@@ -3,12 +3,12 @@ from pprint import pprint, pformat
 from typing import Any
 from uuid import UUID
 
-from loguru import logger
+from loguru import logger # type: ignore
 
-import pytz
+import pytz # type: ignore
 
-from pydantic import BaseModel, conint
-from pymongo.database import Database
+from pydantic import BaseModel, conint # type: ignore
+from pymongo.database import Database # type: ignore
 
 from arbm_core.core import MongoDb
 from arbm_core.core.mongo import PymongoBaseModel
@@ -31,7 +31,7 @@ from arbm_core.private.relationships import LinkedinInvestorActivityAssociation
 
 class YearMonth(BaseModel):
     year: int
-    month: conint(ge=1, le=12)
+    month: conint(ge=1, le=12) # type: ignore
 
 
 class BaseSignal(PymongoBaseModel):

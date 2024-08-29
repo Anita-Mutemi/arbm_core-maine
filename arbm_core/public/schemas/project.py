@@ -1,8 +1,8 @@
 from datetime import date, datetime
 from uuid import UUID
 
-from pydantic import BaseModel, HttpUrl, validator
-from pydantic.color import Color
+from pydantic import BaseModel, HttpUrl, validator  # type: ignore
+from pydantic.color import Color  # type: ignore
 
 from .signals import FundSchema
 

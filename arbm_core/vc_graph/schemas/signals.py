@@ -2,7 +2,7 @@ import abc
 import datetime
 import enum
 
-from src import PyMongoBase
+from . import PyMongoBase  # type: ignore
 
 
 class SignalDirection(str, enum.Enum):

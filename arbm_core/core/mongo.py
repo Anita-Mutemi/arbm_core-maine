@@ -1,7 +1,7 @@
 from abc import ABC
 import uuid
-from bson.objectid import ObjectId as BsonObjectId
-from pydantic import BaseModel, Field
+from bson.objectid import ObjectId as BsonObjectId # type: ignore
+from pydantic import BaseModel, Field # type: ignore
 
 class PydanticObjectId(BsonObjectId):
     @classmethod
